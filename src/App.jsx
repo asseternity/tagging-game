@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import map from '/map.png';
+import Popup from './Popup';
 
 function App() {
   const [someState, setSomeState] = useState();
@@ -31,7 +32,7 @@ function App() {
       </div>
       <div className="bottom_container">
         <div>
-          <button>High Scores</button>
+          <Popup>High scores</Popup>
         </div>
         <div className="buttons_container">
           <button>Left</button>
