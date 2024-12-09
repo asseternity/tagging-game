@@ -1,6 +1,6 @@
 @font-face {
-  font-family: 'IndieFlower-Regular';
-  src: url('/IndieFlower-Regular.ttf') format('truetype');
+  font-family: 'BR';
+  src: url('/BioRhyme-VariableFont_wdth,wght.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
 }
@@ -11,7 +11,7 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
-  font-family: 'IndieFlower-Regular';
+  font-family: 'BR';
 }
 
 .main_container {
@@ -21,18 +21,19 @@ body {
     'map rules'
     'bottom bottom';
   grid-template-columns: 5fr 1fr;
-  grid-template-rows: auto 1fr auto;
+  grid-template-rows: 50px 1fr auto;
   min-height: 100vh;
 }
 
 .top_container {
-  border: 1px solid black;
   grid-area: top;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .map_container {
-  border: 1px solid black;
   grid-area: map;
   overflow: scroll;
   position: relative;
@@ -48,14 +49,23 @@ body {
 }
 
 .rules_container {
-  border: 1px solid black;
   grid-area: rules;
   padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.rules_container h3,
+.rules_container p {
+  padding: 0;
+  margin: 0;
 }
 
 .bottom_container {
   grid-area: bottom;
-  border: 1px solid black;
   display: grid;
   grid-template-rows: 1;
   grid-template-columns: 1fr 3fr 1fr;
@@ -66,4 +76,18 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media screen and (max-width: 600px) {
+  .main_container {
+    display: grid;
+    grid-template-areas:
+      'top'
+      'map'
+      'rules'
+      'bottom';
+    grid-template-columns: auto;
+    grid-template-rows: 50px 1fr auto;
+    min-height: 100vh;
+  }
 }

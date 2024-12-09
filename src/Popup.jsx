@@ -11,8 +11,10 @@ const Popup = ({ children }) => {
 
   const popupContent = (
     <div className={`popup_content ${isVisible ? 'show' : ''}`}>
-      {children}
-      <button onClick={() => togglePopup()}>X</button>
+      <div className="popup_top">
+        <button onClick={() => togglePopup()}>X</button>
+      </div>
+      <div className="popup_main">{children}</div>
     </div>
   );
 

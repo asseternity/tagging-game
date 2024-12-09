@@ -3,8 +3,6 @@ import map from '/map.png';
 import Popup from './Popup';
 
 function App() {
-  const [someState, setSomeState] = useState();
-
   // there is a title on top, rules in a small box to the right,
   // and a window in the middle that resizes in accordance with the screen size, but has a maximum
   // arrow buttons on the bottom of the window let you scroll the map in the window
