@@ -29,8 +29,15 @@ body {
   grid-area: top;
   text-align: center;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.top_container h3,
+.top_container h4 {
+  padding: 0;
+  margin: 0;
 }
 
 .map_container {
@@ -45,7 +52,14 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  pointer-events: none;
+}
+
+.map_container .marker {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: red;
 }
 
 .rules_container {
