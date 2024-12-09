@@ -9,11 +9,21 @@
   top: 0;
   bottom: 0;
   opacity: 0;
+  background-color: wheat;
+  border: 2px solid black;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
   transition: opacity 0.3 ease;
   pointer-events: none;
+  visibility: hidden;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
 }
 
-.popup.show {
+.popup_content.show {
   opacity: 1;
-  pointer-events: all;
+  visibility: visible;
+  pointer-events: auto;
 }
