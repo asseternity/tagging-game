@@ -20,5 +20,5 @@ createRoot(document.getElementById('root')).render(
 // [v] animations of the popup broken
 // [v] add "wintext' to the task, which stays above the marker if correct
 // [v] keep score - 1 per every correct answer
-// [_] gameover screen and a try again button
+// [v] gameover screen and a try again button
 // [_] start on the backend for serving tasks and keeping high scores
