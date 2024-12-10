@@ -2,7 +2,7 @@ import { useState } from 'react';
 import ReactDOM from 'react-dom';
 import './Popup.css';
 
-const Popup = ({ children }) => {
+const Popup = ({ title, children }) => {
   const [isVisible, setIsVisible] = useState(false);
 
   const togglePopup = () => {
@@ -20,7 +20,7 @@ const Popup = ({ children }) => {
 
   return (
     <div className="popup_container">
-      <button onClick={() => togglePopup()}>Show popup!</button>
+      <button onClick={() => togglePopup()}>{title}</button>
       {isVisible &&
         ReactDOM.createPortal(popupContent, document.getElementById('portal'))}
     </div>

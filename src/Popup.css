@@ -52,7 +52,10 @@
   align-items: center;
 }
 
-/* CSS */
+.popup_main p {
+  margin: 20px;
+}
+
 button {
   font-family: 'BR';
   letter-spacing: 2px;
@@ -83,5 +86,12 @@ button:active {
 @media (min-width: 768px) {
   button {
     padding: 0.25em 0.75em;
+  }
+}
+@media (max-width: 460px) {
+  button {
+    font-size: 75%;
+    letter-spacing: normal;
+    padding: 0.2em;
   }
 }

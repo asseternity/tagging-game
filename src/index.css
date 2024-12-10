@@ -17,10 +17,10 @@ body {
 .main_container {
   display: grid;
   grid-template-areas:
-    'top top'
-    'map rules'
-    'bottom bottom';
-  grid-template-columns: 5fr 1fr;
+    'top'
+    'map'
+    'bottom';
+  grid-template-columns: auto;
   grid-template-rows: 50px 1fr auto;
   min-height: 100vh;
 }
@@ -62,20 +62,10 @@ body {
   background-color: red;
 }
 
-.rules_container {
-  grid-area: rules;
-  padding: 5px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.rules_container h3,
-.rules_container p {
-  padding: 0;
-  margin: 0;
+.map_container .task_marker {
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
 }
 
 .bottom_container {
@@ -92,16 +82,23 @@ body {
   align-items: center;
 }
 
-@media screen and (max-width: 600px) {
+.rules_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+}
+
+@media (max-width: 400px) {
   .main_container {
-    display: grid;
-    grid-template-areas:
-      'top'
-      'map'
-      'rules'
-      'bottom';
-    grid-template-columns: auto;
-    grid-template-rows: 50px 1fr auto;
-    min-height: 100vh;
+    grid-template-rows: 60px 1fr auto; /* Slightly adjust row heights */
+  }
+  .map_container {
+    max-height: calc(
+      100vh - 120px
+    ); /* Adjust height to account for top/bottom */
+  }
+  .map_container img {
+    min-height: 80vh;
   }
 }
