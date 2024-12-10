@@ -17,7 +17,8 @@ createRoot(document.getElementById('root')).render(
 // [v] make the circles spawn in the middle of the coords, not in the corner
 // [v] check if a set coord is INSIDE the small square (this will be served as a random task from the api later)
 // [v] improve design for PC: map maybe in the middle of the page and rules in another popup
-// [_] animations of the popup broken
-// [_] add "wintext' to the task, which stays above the marker if correct
-// [_] keep score - 1 per every correct answer
+// [v] animations of the popup broken
+// [v] add "wintext' to the task, which stays above the marker if correct
+// [v] keep score - 1 per every correct answer
 // [_] gameover screen and a try again button
+// [_] start on the backend for serving tasks and keeping high scores

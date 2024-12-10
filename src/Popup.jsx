@@ -10,7 +10,7 @@ const Popup = ({ title, children }) => {
   };
 
   const popupContent = (
-    <div className={`popup_content ${isVisible ? 'show' : ''}`}>
+    <div className={`popup_content ${isVisible ? 'show' : 'hide'}`}>
       <div className="popup_top">
         <button onClick={() => togglePopup()}>X</button>
       </div>
@@ -21,8 +21,7 @@ const Popup = ({ title, children }) => {
   return (
     <div className="popup_container">
       <button onClick={() => togglePopup()}>{title}</button>
-      {isVisible &&
-        ReactDOM.createPortal(popupContent, document.getElementById('portal'))}
+      {ReactDOM.createPortal(popupContent, document.getElementById('portal'))}
     </div>
   );
 };

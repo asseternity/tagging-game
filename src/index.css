@@ -68,6 +68,12 @@ body {
   visibility: hidden;
 }
 
+.map_container .winText {
+  position: absolute;
+  background-color: darkseagreen;
+  border-radius: 5px;
+}
+
 .bottom_container {
   grid-area: bottom;
   display: grid;
