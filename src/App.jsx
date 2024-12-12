@@ -56,7 +56,6 @@ function App() {
         return true;
       } else {
         setIsGameOver(true);
-        // [_] LOSE GAME AND RESTART SCREEN
         return false;
       }
     }
