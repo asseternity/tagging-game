@@ -21,4 +21,4 @@ createRoot(document.getElementById('root')).render(
 // [v] add "wintext' to the task, which stays above the marker if correct
 // [v] keep score - 1 per every correct answer
 // [v] gameover screen and a try again button
-// [_] start on the backend for serving tasks and keeping high scores
+// [v] start on the backend for serving tasks and keeping high scores
