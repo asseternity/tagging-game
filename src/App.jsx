@@ -223,17 +223,24 @@ function App() {
               </div>
             )}
             {isHighScore === 'no' && (
-              <div>
+              <div
+                style={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }}
+              >
                 <h3>Game over</h3>
                 <ol>
-                  {topFive.map((score) => {
+                  {topFive.map((score, index) => {
                     return (
-                      <div key={score.playerName + score.value}>
+                      <li key={index}>
                         {score.playerName}
                         {': '}
                         {score.value}
                         {' points'}
-                      </div>
+                      </li>
                     );
                   })}
                 </ol>
@@ -243,9 +250,8 @@ function App() {
           </div>
         )}
         <div className="top_container">
-          <h3>Leordis map quiz</h3>
           <h4>
-            {currentTask.text} | Score: {score}
+            Leordis quiz | {currentTask.text} | Score: {score}
           </h4>
         </div>
         <div className="map_container" ref={mapContainerRef}>
@@ -297,12 +303,7 @@ function App() {
           <div>
             <Popup title={'High scores'}>High scores</Popup>
           </div>
-          <div className="buttons_container">
-            <button>Left</button>
-            <button>Up</button>
-            <button>Down</button>
-            <button>Right</button>
-          </div>
+          <div className="buttons_container"></div>
           <div className="rules_container">
             <Popup title="Rules">
               <h3>Rules</h3>
