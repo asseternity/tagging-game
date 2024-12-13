@@ -82,14 +82,16 @@ body {
 
 .map_container .task_marker {
   pointer-events: none;
-  opacity: 0.6;
-  visibility: visible;
+  opacity: 0;
+  visibility: hidden;
 }
 
 .map_container .winText {
   position: absolute;
   background-color: darkseagreen;
   border-radius: 5px;
+  opacity: 0.5;
+  pointer-events: none;
 }
 
 .bottom_container {
