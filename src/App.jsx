@@ -19,13 +19,16 @@ function App() {
     // function to fetch a random task
     const fetchRandomTask = async () => {
       try {
-        const response = await fetch('http://localhost:3000/api/random_task', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({ completedTasks: completedTasks }),
-        });
+        const response = await fetch(
+          'https://tagging-game-api-production.up.railway.app/random_task',
+          {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ completedTasks: completedTasks }),
+          }
+        );
         if (response.ok) {
           const data = await response.json();
           const newTask = {
@@ -116,7 +119,7 @@ function App() {
         // first, check if my score is in the top 5
         try {
           const response = await fetch(
-            'http://localhost:3000/api/is_it_high_score',
+            'https://tagging-game-api-production.up.railway.app/is_it_high_score',
             {
               method: 'POST',
               headers: {
@@ -149,12 +152,15 @@ function App() {
 
   const getTopFive = async () => {
     try {
-      const response = await fetch('http://localhost:3000/api/top_five', {
-        method: 'GET',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      });
+      const response = await fetch(
+        'https://tagging-game-api-production.up.railway.app/top_five',
+        {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        }
+      );
       if (response.ok) {
         const data = await response.json();
         setTopFive(data);
@@ -168,7 +174,7 @@ function App() {
     if (playerName.trim()) {
       try {
         const response = await fetch(
-          'http://localhost:3000/api/new_high_score',
+          'https://tagging-game-api-production.up.railway.app/new_high_score',
           {
             method: 'POST',
             headers: {
