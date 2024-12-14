@@ -80,6 +80,14 @@ body {
   background-color: red;
 }
 
+.map_container .pendingMarker {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: white;
+}
+
 .map_container .task_marker {
   pointer-events: none;
   opacity: 0;
