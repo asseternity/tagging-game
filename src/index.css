@@ -23,12 +23,12 @@ body {
     'bottom';
   grid-template-columns: auto;
   grid-template-rows: 50px 1fr auto;
-  min-height: 100vh;
+  min-height: 100svh;
 }
 
 .main_container .game_over {
   position: absolute;
-  height: 100vh;
+  height: 100svh;
   width: 100vw;
   position: fixed;
   background-color: wheat;
@@ -130,7 +130,7 @@ body {
   }
   .map_container {
     max-height: calc(
-      100vh - 120px
+      100svh - 120px
     ); /* Adjust height to account for top/bottom */
   }
   .map_container img {
