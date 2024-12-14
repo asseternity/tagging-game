@@ -126,7 +126,7 @@ body {
 @media (max-width: 400px) {
   .main_container {
     grid-template-rows: 60px 1fr auto; /* Slightly adjust row heights */
-    max-height: 100vh;
+    max-height: 100svh;
   }
   .map_container {
     max-height: calc(
