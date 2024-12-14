@@ -146,7 +146,7 @@ function App2() {
   const getTopFive = async () => {
     try {
       const response = await fetch(
-        'https://tagging-game-api-production.up.railway.app/top_five',
+        'https://tagging-game-api-production.up.railway.app/api/top_five',
         {
           method: 'GET',
           headers: {
@@ -167,7 +167,7 @@ function App2() {
     if (playerName.trim()) {
       try {
         const response = await fetch(
-          'https://tagging-game-api-production.up.railway.app/new_high_score',
+          'https://tagging-game-api-production.up.railway.app/api/new_high_score',
           {
             method: 'POST',
             headers: {
