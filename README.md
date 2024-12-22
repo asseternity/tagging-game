@@ -1,8 +1,7 @@
-# React + Vite
+# Map Quiz (variation of Where's Waldo)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is game where you have to find locations on the map of a fantasy continent that I designed, Leordis. Read the task displayed at the top of the page. Scroll and explore the map of Leordis. Click on the location where you believe the task is pointing to, then click confirm.
 
-Currently, two official plugins are available:
+This is a JAM stack app. A React app for frontend and a nodeJS REST api for backend that serves tasks and keeps high scores. Technologies used - Frontend: HTML, CSS, JS, ReactJS. Backend: Node.js, Express.js, passport, jwt tokens, bcrypt. DB: PostgreSQL, Prisma ORM.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Try it out here: https://asseternity.github.io/tagging-game/
